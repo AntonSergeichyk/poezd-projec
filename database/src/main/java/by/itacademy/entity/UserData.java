@@ -8,7 +8,6 @@ import lombok.ToString;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.Entity;
-import javax.persistence.Id;
 
 @Entity
 @Getter
@@ -16,7 +15,7 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @AllArgsConstructor
 @Embeddable
-public class FioUser {
+public class UserData {
 
     @Column(name = "surname", nullable = false, unique = false)
     private String surname;
@@ -26,14 +25,7 @@ public class FioUser {
 
     @Column(name = "patronymic", nullable = false, unique = false)
     private String patronymic;
-    @Id
-    private String id;
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
+    @Column(name = "passport", nullable = false, unique = false)
+    private String passport;
 }

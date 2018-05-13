@@ -1,6 +1,5 @@
 package by.itacademy.dao;
 
-import by.itacademy.entity.Buyer;
 import by.itacademy.entity.User;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
@@ -9,25 +8,25 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-public class BuyerDao {
+public class UserDao {
 
-    private static final BuyerDao INSTANCE = new BuyerDao();
+    private static final UserDao INSTANCE = new UserDao();
     private static final SessionFactory FACTORY = new Configuration().configure().buildSessionFactory();
 
-    public Buyer find() {
-        Buyer buyer;
+    public User find() {
+        User user;
         try (Session session = FACTORY.openSession()) {
             session.beginTransaction();
 
-            buyer = session.find(Buyer.class, 1L);
+            user = session.find(User.class, 1L);
 
             session.getTransaction().commit();
         }
 
-        return buyer;
+        return user;
     }
 
-    public static BuyerDao getInstance() {
+    public static UserDao getInstance() {
         return INSTANCE;
     }
 }

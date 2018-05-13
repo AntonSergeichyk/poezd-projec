@@ -1,6 +1,6 @@
 package by.itacademy.servlet;
 
-import by.itacademy.service.BuyerService;
+import by.itacademy.service.UserService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,11 +10,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet("/userServlet")
-public class BuyerServlet extends HttpServlet {
+public class UserServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("buyer", BuyerService.getInstance().findBuyer());
+        req.setAttribute("user", UserService.getInstance().findUser());
         getServletContext()
                 .getRequestDispatcher("/WEB-INF/jsp/user.jsp")
                 .forward(req, resp);

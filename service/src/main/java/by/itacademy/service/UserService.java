@@ -1,19 +1,20 @@
 package by.itacademy.service;
 
 import by.itacademy.dao.UserDao;
+import by.itacademy.entity.User;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-public class BuyerService {
+public class UserService {
 
-    private static final BuyerService INSTANCE = new BuyerService();
+    private static final UserService INSTANCE = new UserService();
 
-    public Buyer findBuyer() {
+    public User findUser() {
         return UserDao.getInstance().find();
     }
 
-    public static BuyerService getInstance() {
+    public static UserService getInstance() {
         return INSTANCE;
     }
 }
