@@ -23,7 +23,7 @@ import javax.persistence.Table;
 public class Booking extends BaseEntity<Long> {
 
     @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false, unique = false)
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     @Embedded

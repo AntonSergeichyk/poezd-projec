@@ -17,15 +17,15 @@ import javax.persistence.Entity;
 @Embeddable
 public class UserData {
 
-    @Column(name = "surname", nullable = false, unique = false)
+    @Column(name = "surname", nullable = false)
     private String surname;
 
-    @Column(name = "name", nullable = false, unique = false)
+    @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "patronymic", nullable = false, unique = false)
+    @Column(name = "patronymic", nullable = false)
     private String patronymic;
 
-    @Column(name = "passport", nullable = false, unique = false)
+    @Column(name = "passport", nullable = false)
     private String passport;
 }

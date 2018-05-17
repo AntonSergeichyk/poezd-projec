@@ -19,7 +19,6 @@ import javax.persistence.Table;
 @Table(name = "type_wagon", schema = "railway_storage")
 public class TypeWagon extends BaseEntity<Integer> {
 
-
     @Column(name = "type", nullable = false, unique = true)
     private String type;
 }

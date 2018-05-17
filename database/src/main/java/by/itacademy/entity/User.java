@@ -22,15 +22,15 @@ import javax.persistence.Table;
 public class User extends BaseEntity<Long> {
 
     @ManyToOne
-    @JoinColumn(name = "role_id", unique = false, nullable = true)
+    @JoinColumn(name = "role_id")
     private Role role;
 
     @Column(name = "name", nullable = false, unique = true)
     private String name;
 
-    @Column(name = "password", nullable = false, unique = false)
+    @Column(name = "password", nullable = false)
     private String password;
 
-    @Column(name = "mailbox", nullable = true, unique = false)
+    @Column(name = "mailbox")
     private String mailbox;
 }

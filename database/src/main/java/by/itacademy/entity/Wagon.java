@@ -24,7 +24,7 @@ import java.util.List;
 @Table(name = "wagon", schema = "railway_storage")
 public class Wagon extends BaseEntity<Long> {
 
-    @Column(name = "number", nullable = false, unique = false)
+    @Column(name = "number", nullable = false)
     private Integer number;
 
     @ManyToOne
@@ -32,7 +32,7 @@ public class Wagon extends BaseEntity<Long> {
     private Train train;
 
     @ManyToOne
-    @JoinColumn(name = "type_wagon_id", nullable = false, unique = false)
+    @JoinColumn(name = "type_wagon_id", nullable = false)
     private TypeWagon typeWagon;
 
     @OneToMany(mappedBy = "wagon")

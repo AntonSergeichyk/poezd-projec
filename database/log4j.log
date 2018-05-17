@@ -1,153 +1,153 @@
-2018-05-12 21:18:44,737 INFO  - HHH000412: Hibernate Core {5.2.16.Final}
-2018-05-12 21:18:44,737 INFO  - HHH000206: hibernate.properties not found
-2018-05-12 21:18:45,071 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2018-05-12 21:18:45,192 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-2018-05-12 21:18:45,207 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
+2018-05-17 22:33:49,632 INFO  - HHH000412: Hibernate Core {5.2.16.Final}
+2018-05-17 22:33:49,632 INFO  - HHH000206: hibernate.properties not found
+2018-05-17 22:33:49,917 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-17 22:33:50,033 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-05-17 22:33:50,052 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
             railway_storage]
-2018-05-12 21:18:45,207 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
-2018-05-12 21:18:45,207 INFO  - HHH10001003: Autocommit mode: false
-2018-05-12 21:18:45,207 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
-2018-05-12 21:18:45,424 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2018-05-12 21:18:46,541 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@21694e53] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-05-12 21:18:46,541 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@759fad4] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-05-12 21:18:46,641 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@2c4ca0f9'
-2018-05-12 21:18:46,742 INFO  - HHH000397: Using ASTQueryTranslatorFactory
-2018-05-12 21:18:47,058 INFO  - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
-2018-05-12 21:18:47,058 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5b989dc7] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-05-12 21:18:47,088 INFO  - HHH10001008: Cleaning up connection pool [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
+2018-05-17 22:33:50,053 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-05-17 22:33:50,053 INFO  - HHH10001003: Autocommit mode: false
+2018-05-17 22:33:50,055 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-05-17 22:33:50,302 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-05-17 22:33:51,289 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@21694e53] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-05-17 22:33:51,289 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@759fad4] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-05-17 22:33:51,373 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@2c4ca0f9'
+2018-05-17 22:33:51,520 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-05-17 22:33:52,060 INFO  - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+2018-05-17 22:33:52,060 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@c7a977f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-05-17 22:33:52,106 INFO  - HHH10001008: Cleaning up connection pool [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
             railway_storage]
-2018-05-12 21:18:47,281 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-2018-05-12 21:18:47,281 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
+2018-05-17 22:33:52,265 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-05-17 22:33:52,265 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
             railway_storage]
-2018-05-12 21:18:47,282 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
-2018-05-12 21:18:47,283 INFO  - HHH10001003: Autocommit mode: false
-2018-05-12 21:18:47,283 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
-2018-05-12 21:18:47,286 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2018-05-12 21:18:47,501 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@12477988] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-05-12 21:18:47,507 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2caf6912] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-05-12 21:18:47,578 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@2c4ca0f9'
-2018-05-12 21:18:47,584 INFO  - HHH000397: Using ASTQueryTranslatorFactory
-2018-05-12 21:18:47,641 INFO  - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
-2018-05-12 21:18:47,641 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5f78de22] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-05-12 21:18:47,668 INFO  - HHH10001008: Cleaning up connection pool [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
+2018-05-17 22:33:52,266 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-05-17 22:33:52,268 INFO  - HHH10001003: Autocommit mode: false
+2018-05-17 22:33:52,269 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-05-17 22:33:52,273 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-05-17 22:33:52,414 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3b0ca5e1] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-05-17 22:33:52,417 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5bb3131b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-05-17 22:33:52,465 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@2c4ca0f9'
+2018-05-17 22:33:52,473 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-05-17 22:33:52,569 INFO  - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+2018-05-17 22:33:52,570 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@66434cc8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-05-17 22:33:52,584 INFO  - HHH10001008: Cleaning up connection pool [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
             railway_storage]
-2018-05-12 21:18:47,869 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-2018-05-12 21:18:47,872 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
+2018-05-17 22:33:52,661 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-05-17 22:33:52,662 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
             railway_storage]
-2018-05-12 21:18:47,880 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
-2018-05-12 21:18:47,882 INFO  - HHH10001003: Autocommit mode: false
-2018-05-12 21:18:47,884 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
-2018-05-12 21:18:47,898 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2018-05-12 21:18:48,015 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@21325036] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-05-12 21:18:48,018 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@489543a6] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-05-12 21:18:48,080 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@2c4ca0f9'
-2018-05-12 21:18:48,088 INFO  - HHH000397: Using ASTQueryTranslatorFactory
-2018-05-12 21:18:48,131 INFO  - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
-2018-05-12 21:18:48,131 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@25d3cfc8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-05-12 21:18:48,143 INFO  - HHH10001008: Cleaning up connection pool [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
+2018-05-17 22:33:52,662 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-05-17 22:33:52,663 INFO  - HHH10001003: Autocommit mode: false
+2018-05-17 22:33:52,663 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-05-17 22:33:52,666 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-05-17 22:33:52,808 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2032e725] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-05-17 22:33:52,842 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4d23015c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-05-17 22:33:52,898 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@2c4ca0f9'
+2018-05-17 22:33:52,903 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-05-17 22:33:52,921 INFO  - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+2018-05-17 22:33:52,921 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5e39850] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-05-17 22:33:52,936 INFO  - HHH10001008: Cleaning up connection pool [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
             railway_storage]
-2018-05-12 21:18:48,210 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-2018-05-12 21:18:48,212 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
+2018-05-17 22:33:52,999 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-05-17 22:33:52,999 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
             railway_storage]
-2018-05-12 21:18:48,212 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
-2018-05-12 21:18:48,212 INFO  - HHH10001003: Autocommit mode: false
-2018-05-12 21:18:48,213 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
-2018-05-12 21:18:48,215 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2018-05-12 21:18:48,354 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@74ad8d05] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-05-12 21:18:48,357 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@676ff3b0] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-05-12 21:18:48,400 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@2c4ca0f9'
-2018-05-12 21:18:48,402 INFO  - HHH000397: Using ASTQueryTranslatorFactory
-2018-05-12 21:18:48,433 INFO  - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
-2018-05-12 21:18:48,433 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1e6dad8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-05-12 21:18:48,433 INFO  - HHH10001008: Cleaning up connection pool [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
+2018-05-17 22:33:52,999 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-05-17 22:33:52,999 INFO  - HHH10001003: Autocommit mode: false
+2018-05-17 22:33:52,999 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-05-17 22:33:53,016 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-05-17 22:33:53,121 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@105b693d] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-05-17 22:33:53,121 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3fae596] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-05-17 22:33:53,168 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@2c4ca0f9'
+2018-05-17 22:33:53,183 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-05-17 22:33:53,199 INFO  - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+2018-05-17 22:33:53,199 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7c4fc2bf] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-05-17 22:33:53,220 INFO  - HHH10001008: Cleaning up connection pool [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
             railway_storage]
-2018-05-12 21:18:48,517 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-2018-05-12 21:18:48,518 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
+2018-05-17 22:33:53,316 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-05-17 22:33:53,317 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
             railway_storage]
-2018-05-12 21:18:48,518 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
-2018-05-12 21:18:48,519 INFO  - HHH10001003: Autocommit mode: false
-2018-05-12 21:18:48,519 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
-2018-05-12 21:18:48,521 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2018-05-12 21:18:48,629 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@73ad7e90] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-05-12 21:18:48,630 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4ba380c7] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-05-12 21:18:48,724 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@2c4ca0f9'
-2018-05-12 21:18:48,735 INFO  - HHH000397: Using ASTQueryTranslatorFactory
-2018-05-12 21:18:48,934 INFO  - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
-2018-05-12 21:18:48,950 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2e2f720] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-05-12 21:18:48,950 INFO  - HHH10001008: Cleaning up connection pool [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
+2018-05-17 22:33:53,317 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-05-17 22:33:53,317 INFO  - HHH10001003: Autocommit mode: false
+2018-05-17 22:33:53,318 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-05-17 22:33:53,320 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-05-17 22:33:53,489 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4ab550d5] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-05-17 22:33:53,491 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3cd206b5] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-05-17 22:33:53,564 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@2c4ca0f9'
+2018-05-17 22:33:53,571 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-05-17 22:33:53,705 INFO  - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+2018-05-17 22:33:53,706 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@37864b77] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-05-17 22:33:53,722 INFO  - HHH10001008: Cleaning up connection pool [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
             railway_storage]
-2018-05-12 21:18:49,019 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-2018-05-12 21:18:49,035 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
+2018-05-17 22:33:53,772 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-05-17 22:33:53,772 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
             railway_storage]
-2018-05-12 21:18:49,035 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
-2018-05-12 21:18:49,035 INFO  - HHH10001003: Autocommit mode: false
-2018-05-12 21:18:49,035 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
-2018-05-12 21:18:49,035 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2018-05-12 21:18:49,123 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2ff15f8c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-05-12 21:18:49,127 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7ea899a9] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-05-12 21:18:49,233 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@2c4ca0f9'
-2018-05-12 21:18:49,245 INFO  - HHH000397: Using ASTQueryTranslatorFactory
-2018-05-12 21:18:49,279 INFO  - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
-2018-05-12 21:18:49,280 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@188b6035] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-05-12 21:18:49,287 INFO  - HHH10001008: Cleaning up connection pool [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
+2018-05-17 22:33:53,772 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-05-17 22:33:53,772 INFO  - HHH10001003: Autocommit mode: false
+2018-05-17 22:33:53,772 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-05-17 22:33:53,772 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-05-17 22:33:53,872 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6bbe50c9] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-05-17 22:33:53,872 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3c46dcbe] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-05-17 22:33:53,919 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@2c4ca0f9'
+2018-05-17 22:33:53,934 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-05-17 22:33:53,972 INFO  - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+2018-05-17 22:33:53,972 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4aedaf61] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-05-17 22:33:53,972 INFO  - HHH10001008: Cleaning up connection pool [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
             railway_storage]
-2018-05-12 21:18:49,330 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-2018-05-12 21:18:49,330 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
+2018-05-17 22:33:54,034 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-05-17 22:33:54,034 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
             railway_storage]
-2018-05-12 21:18:49,331 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
-2018-05-12 21:18:49,331 INFO  - HHH10001003: Autocommit mode: false
-2018-05-12 21:18:49,331 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
-2018-05-12 21:18:49,332 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2018-05-12 21:18:49,413 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@524a2ffb] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-05-12 21:18:49,413 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2f61d591] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-05-12 21:18:49,444 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@2c4ca0f9'
-2018-05-12 21:18:49,460 INFO  - HHH000397: Using ASTQueryTranslatorFactory
-2018-05-12 21:18:49,475 INFO  - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
-2018-05-12 21:18:49,475 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6c6366cf] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-05-12 21:18:49,475 INFO  - HHH10001008: Cleaning up connection pool [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
+2018-05-17 22:33:54,034 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-05-17 22:33:54,034 INFO  - HHH10001003: Autocommit mode: false
+2018-05-17 22:33:54,034 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-05-17 22:33:54,034 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-05-17 22:33:54,072 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@39c385d6] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-05-17 22:33:54,088 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1cec219f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-05-17 22:33:54,134 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@2c4ca0f9'
+2018-05-17 22:33:54,134 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-05-17 22:33:54,172 INFO  - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+2018-05-17 22:33:54,172 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@18460128] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-05-17 22:33:54,172 INFO  - HHH10001008: Cleaning up connection pool [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
             railway_storage]
-2018-05-12 21:18:49,544 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-2018-05-12 21:18:49,544 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
+2018-05-17 22:33:54,235 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-05-17 22:33:54,235 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
             railway_storage]
-2018-05-12 21:18:49,544 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
-2018-05-12 21:18:49,544 INFO  - HHH10001003: Autocommit mode: false
-2018-05-12 21:18:49,544 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
-2018-05-12 21:18:49,544 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2018-05-12 21:18:49,609 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1f0b3cfe] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-05-12 21:18:49,610 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@14ef2482] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-05-12 21:18:49,629 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@2c4ca0f9'
-2018-05-12 21:18:49,629 INFO  - HHH000397: Using ASTQueryTranslatorFactory
-2018-05-12 21:18:49,660 INFO  - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
-2018-05-12 21:18:49,660 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@de8039f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-05-12 21:18:49,660 INFO  - HHH10001008: Cleaning up connection pool [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
+2018-05-17 22:33:54,235 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-05-17 22:33:54,235 INFO  - HHH10001003: Autocommit mode: false
+2018-05-17 22:33:54,235 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-05-17 22:33:54,235 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-05-17 22:33:54,288 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4beaf6bd] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-05-17 22:33:54,288 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6b2e46af] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-05-17 22:33:54,350 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@2c4ca0f9'
+2018-05-17 22:33:54,350 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-05-17 22:33:54,388 INFO  - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+2018-05-17 22:33:54,388 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@227a47] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-05-17 22:33:54,404 INFO  - HHH10001008: Cleaning up connection pool [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
             railway_storage]
-2018-05-12 21:18:49,760 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-2018-05-12 21:18:49,760 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
+2018-05-17 22:33:54,473 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-05-17 22:33:54,473 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
             railway_storage]
-2018-05-12 21:18:49,760 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
-2018-05-12 21:18:49,760 INFO  - HHH10001003: Autocommit mode: false
-2018-05-12 21:18:49,760 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
-2018-05-12 21:18:49,760 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2018-05-12 21:18:49,845 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@16727bf0] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-05-12 21:18:49,845 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2f84acf7] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-05-12 21:18:49,876 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@2c4ca0f9'
-2018-05-12 21:18:49,876 INFO  - HHH000397: Using ASTQueryTranslatorFactory
-2018-05-12 21:18:49,914 INFO  - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
-2018-05-12 21:18:49,914 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6e041285] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-05-12 21:18:49,914 INFO  - HHH10001008: Cleaning up connection pool [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
+2018-05-17 22:33:54,473 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-05-17 22:33:54,473 INFO  - HHH10001003: Autocommit mode: false
+2018-05-17 22:33:54,473 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-05-17 22:33:54,473 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-05-17 22:33:54,551 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@753aca85] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-05-17 22:33:54,551 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2e645fbd] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-05-17 22:33:54,573 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@2c4ca0f9'
+2018-05-17 22:33:54,573 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-05-17 22:33:54,604 INFO  - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+2018-05-17 22:33:54,620 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7412ed6b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-05-17 22:33:54,620 INFO  - HHH10001008: Cleaning up connection pool [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
             railway_storage]
-2018-05-12 21:18:49,977 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-2018-05-12 21:18:49,977 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
+2018-05-17 22:33:54,673 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-05-17 22:33:54,673 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
             railway_storage]
-2018-05-12 21:18:49,977 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
-2018-05-12 21:18:49,977 INFO  - HHH10001003: Autocommit mode: false
-2018-05-12 21:18:49,977 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
-2018-05-12 21:18:49,977 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2018-05-12 21:18:50,030 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3c3820bb] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-05-12 21:18:50,030 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@376c7d7d] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-05-12 21:18:50,077 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@2c4ca0f9'
-2018-05-12 21:18:50,092 INFO  - HHH000397: Using ASTQueryTranslatorFactory
-2018-05-12 21:18:50,146 INFO  - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
-2018-05-12 21:18:50,146 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@60d40ff4] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-05-12 21:18:50,146 INFO  - HHH10001008: Cleaning up connection pool [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
+2018-05-17 22:33:54,673 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
+2018-05-17 22:33:54,673 INFO  - HHH10001003: Autocommit mode: false
+2018-05-17 22:33:54,673 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-05-17 22:33:54,673 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-05-17 22:33:54,736 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@313f8301] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-05-17 22:33:54,736 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5cc9d3d0] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-05-17 22:33:54,789 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@2c4ca0f9'
+2018-05-17 22:33:54,789 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-05-17 22:33:54,891 INFO  - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+2018-05-17 22:33:54,891 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4a37191a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-05-17 22:33:54,895 INFO  - HHH10001008: Cleaning up connection pool [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
             railway_storage]

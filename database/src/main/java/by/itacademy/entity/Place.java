@@ -22,19 +22,19 @@ import javax.persistence.Table;
 public class Place extends BaseEntity<Long> {
 
     @ManyToOne
-    @JoinColumn(name = "wagon_id", nullable = false, unique = false)
+    @JoinColumn(name = "wagon_id", nullable = false)
     private Wagon wagon;
 
-    @Column(name = "number", nullable = false, unique = false)
+    @Column(name = "number", nullable = false)
     private Integer number;
 
     @ManyToOne
-    @JoinColumn(name = "type_place_id", nullable = true, unique = false)
+    @JoinColumn(name = "type_place_id")
     private TypePlace typePlace;
 
-    @Column(name = "reserved", nullable = true, unique = false)
+    @Column(name = "reserved")
     private Boolean reserved;
 
-    @Column(name = "cost", nullable = false, unique = false)
+    @Column(name = "cost", nullable = false)
     private Double cost;
 }

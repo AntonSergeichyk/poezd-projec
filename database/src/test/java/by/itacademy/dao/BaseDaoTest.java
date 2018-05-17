@@ -64,10 +64,12 @@ public class BaseDaoTest {
             Arrays.asList(objects).forEach(it -> {
                 session.save(it);
                 assertNotNull("Entity is not saved", it.getId());
-            });
 
-            Object object = session.get(objects[objects.length - 1].getClass(), objects[objects.length - 1].getId());
-            assertNotNull("Entity is null", object);
+                session.evict(it);
+
+                session.get(it.getClass(), it.getId());
+                assertNotNull("Entity is null", it);
+            });
 
             session.getTransaction().commit();
         }

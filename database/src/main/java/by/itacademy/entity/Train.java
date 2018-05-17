@@ -25,7 +25,7 @@ public class Train extends BaseEntity<Long> {
     @Column(name = "number", nullable = false, unique = true)
     private Integer number;
 
-    @Column(name = "name", nullable = false, unique = false)
+    @Column(name = "name", nullable = false)
     private String name;
 
     @OneToMany(mappedBy = "train")
