@@ -4,7 +4,10 @@
     <title>Title</title>
 </head>
 <body>
-<h1>genre:</h1>
-${requestScope.genre.name}
+<h1>user:</h1>
+${requestScope.user.name}<br>
+${requestScope.user.role.name}<br>
+${requestScope.user.password}<br>
+${requestScope.user.mailbox}
 </body>
 </html>
