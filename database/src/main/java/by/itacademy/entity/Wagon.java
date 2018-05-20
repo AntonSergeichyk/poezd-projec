@@ -28,7 +28,7 @@ public class Wagon extends BaseEntity<Long> {
     private Integer number;
 
     @ManyToOne
-    @JoinColumn(name = "train_id", nullable = false, unique = true)
+    @JoinColumn(name = "train_id", nullable = false)
     private Train train;
 
     @ManyToOne

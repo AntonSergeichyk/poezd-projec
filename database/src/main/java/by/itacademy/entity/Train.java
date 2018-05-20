@@ -22,7 +22,7 @@ import java.util.List;
 @Table(name = "train", schema = "railway_storage")
 public class Train extends BaseEntity<Long> {
 
-    @Column(name = "number", nullable = false, unique = true)
+    @Column(name = "number", nullable = false)
     private Integer number;
 
     @Column(name = "name", nullable = false)

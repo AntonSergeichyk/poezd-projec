@@ -1,9 +1,10 @@
 package by.itacademy.dao;
 
 import by.itacademy.entity.BaseEntity;
+import by.itacademy.manager.SessionFactoryManager;
+import by.itacademy.util.ProjectTestDataImporter;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -18,7 +19,7 @@ public class BaseDaoTest {
 
     @BeforeClass
     public static void before(){
-         FACTORY = new Configuration().configure().buildSessionFactory();
+        FACTORY = SessionFactoryManager.getSessionFactory();
     }
 
     @AfterClass
@@ -41,6 +42,7 @@ public class BaseDaoTest {
             session.createQuery("delete from Train ").executeUpdate();
             session.createQuery("delete from Station ").executeUpdate();
             session.getTransaction().commit();
+            ProjectTestDataImporter.getInstance().importTestData(FACTORY);
         }
     }
 
