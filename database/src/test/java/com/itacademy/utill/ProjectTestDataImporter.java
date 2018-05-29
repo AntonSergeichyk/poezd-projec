@@ -1,40 +1,44 @@
-package by.itacademy.util;
+package com.itacademy.util;
 
-import by.itacademy.dao.impl.BookingDaoImpl;
-import by.itacademy.dao.impl.PlaceDaoImpl;
-import by.itacademy.dao.impl.RoleDaoImpl;
-import by.itacademy.dao.impl.StationDaoImpl;
-import by.itacademy.dao.impl.TimeTableDaoImpl;
-import by.itacademy.dao.impl.TrainDaoImpl;
-import by.itacademy.dao.impl.TypePlaceDaoImpl;
-import by.itacademy.dao.impl.TypeWagonDaoImpl;
-import by.itacademy.dao.impl.UserDaoImpl;
-import by.itacademy.dao.impl.WagonDaoImpl;
-import by.itacademy.entity.Booking;
-import by.itacademy.entity.Place;
-import by.itacademy.entity.Role;
-import by.itacademy.entity.Station;
-import by.itacademy.entity.TimeTable;
-import by.itacademy.entity.Train;
-import by.itacademy.entity.TypePlace;
-import by.itacademy.entity.TypeWagon;
-import by.itacademy.entity.User;
-import by.itacademy.entity.UserData;
-import by.itacademy.entity.Wagon;
-import lombok.AccessLevel;
-import lombok.NoArgsConstructor;
+import com.itacademy.dao.impl.*;
+import com.itacademy.entity.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 import java.time.Month;
 
-@NoArgsConstructor(access = AccessLevel.PRIVATE)
-public final class ProjectTestDataImporter {
+@Component
+@Transactional
+public class ProjectTestDataImporter {
 
-    private static ProjectTestDataImporter INSTANCE = new ProjectTestDataImporter();
+    @Autowired
+    private SessionFactory sessionFactory;
+    @Autowired
+    private RoleDaoImpl roleDao;
+    @Autowired
+    private BookingDaoImpl bookingDao;
+    @Autowired
+    private PlaceDaoImpl placeDao;
+    @Autowired
+    private StationDaoImpl stationDao;
+    @Autowired
+    private TimeTableDaoImpl timeTableDao;
+    @Autowired
+    private TrainDaoImpl trainDao;
+    @Autowired
+    private TypePlaceDaoImpl typePlaceDao;
+    @Autowired
+    private TypeWagonDaoImpl typeWagonDao;
+    @Autowired
+    private UserDaoImpl userDao;
+    @Autowired
+    private WagonDaoImpl wagonDao;
 
-    public void importTestData(SessionFactory sessionFactory) {
+    public void importTestData() {
         try (Session session = sessionFactory.openSession()) {
 
             session.beginTransaction();
@@ -155,75 +159,71 @@ public final class ProjectTestDataImporter {
 
     private Role saveRole(Session session, String name) {
         Role role = new Role(name);
-        RoleDaoImpl.getInstance().save(role);
+        roleDao.save(role);
 
         return role;
     }
 
     private User saveUser(Session session, Role role, String name, String password, String mailbox) {
         User user = new User(role, name, password, mailbox);
-        UserDaoImpl.getInstance().save(user);
+        userDao.save(user);
 
         return user;
     }
 
     private Station saveStation(Session session, String name) {
         Station station = new Station(name);
-        StationDaoImpl.getInstance().save(station);
+        stationDao.save(station);
 
         return station;
     }
 
     private Train saveTrain(Session session, Integer number, String name) {
         Train train = new Train(number, name);
-        TrainDaoImpl.getInstance().save(train);
+        trainDao.save(train);
 
         return train;
     }
 
     private TimeTable saveTimeTable(Session session, Station stationStart, Station stationFinish, Train train, LocalDate timeStart, LocalDate timeFinish) {
         TimeTable timeTable = new TimeTable(stationStart, stationFinish, train, timeStart, timeFinish);
-        TimeTableDaoImpl.getInstance().save(timeTable);
+        timeTableDao.save(timeTable);
 
         return timeTable;
     }
 
     private TypeWagon saveTypeWagon(Session session, String type) {
         TypeWagon typeWagon = new TypeWagon(type);
-        TypeWagonDaoImpl.getInstance().save(typeWagon);
+        typeWagonDao.save(typeWagon);
 
         return typeWagon;
     }
 
     private Wagon saveWagon(Session session, Integer number, Train train, TypeWagon typeWagon) {
         Wagon wagon = new Wagon(number, train, typeWagon);
-        WagonDaoImpl.getInstance().save(wagon);
+        wagonDao.save(wagon);
 
         return wagon;
     }
 
     private TypePlace saveTypePlace(Session session, String type) {
         TypePlace typePlace = new TypePlace(type);
-        TypePlaceDaoImpl.getInstance().save(typePlace);
+        typePlaceDao.save(typePlace);
 
         return typePlace;
     }
 
     private Place savePlace(Session session, Wagon wagon, Integer number, TypePlace typePlace, Boolean reserved, Double cost) {
         Place place = new Place(wagon, number, typePlace, reserved, cost);
-        PlaceDaoImpl.getInstance().save(place);
+        placeDao.save(place);
 
         return place;
     }
 
     private Booking saveBooking(Session session, User user, UserData userData, Place place) {
         Booking booking = new Booking(user, userData, place);
-        BookingDaoImpl.getInstance().save(booking);
+        bookingDao.save(booking);
 
         return booking;
-    }
-
-    public static ProjectTestDataImporter getInstance() {
-        return INSTANCE;
     }
 }
