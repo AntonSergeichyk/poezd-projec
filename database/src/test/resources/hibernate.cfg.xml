@@ -15,7 +15,7 @@
         <property name="format_sql">true</property>
 
         <!-- DB schema will be updated if needed -->
-        <property name="hbm2ddl.auto">create-drop</property>
+        <property name="hbm2ddl.auto">create</property>
 
         <mapping class="by.itacademy.entity.Role"/>
         <mapping class="by.itacademy.entity.TypeWagon"/>
