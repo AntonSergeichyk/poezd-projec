@@ -15,7 +15,6 @@ public class TrainDaoImpl extends BaseDao<Long, Train> {
 
     private static final TrainDaoImpl INSTANCE = new TrainDaoImpl();
 
-
     public static TrainDaoImpl getInstance() {
         return INSTANCE;
     }

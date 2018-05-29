@@ -21,15 +21,21 @@ public class WagonDaoImpl extends BaseDao<Long, Wagon> implements WagonDao {
     private static final WagonDaoImpl INSTANCE = new WagonDaoImpl();
 
     @Override
-    public Wagon findByNumber(Integer number) {
+    public Wagon findByNumber(Integer wagonNumber, Long trainId) {
         try (Session session = SESSION_FACTORY.openSession()) {
-            CriteriaBuilder cb = session.getCriteriaBuilder();
-            CriteriaQuery<Wagon> criteria = cb.createQuery(Wagon.class);
-            Root<Wagon> root = criteria.from(Wagon.class);
-            criteria.select(root)
-                    .where(cb.equal(root.get(Wagon_.number), number));
-
-            return session.createQuery(criteria).getSingleResult();
+//            CriteriaBuilder cb = session.getCriteriaBuilder();
+//            CriteriaQuery<Wagon> criteria = cb.createQuery(Wagon.class);
+//            Root<Train> root = criteria.from(Train.class);
+//            ListJoin<Train, Wagon> wagonJoin = root.join(Train_.wagons);
+//            criteria.select(wagonJoin)
+//                    .where(cb.equal(root.get(Train_.number), trainNumber));
+//
+//            return session.createQuery(criteria).getSingleResult();
+            return session.createQuery("select w from Wagon w join w.train t " +
+                    "where w.number = :wagonNumber and t.id= :trainId", Wagon.class)
+                    .setParameter("wagonNumber", wagonNumber)
+                    .setParameter("trainId", trainId)
+                    .getSingleResult();
         }
     }
 

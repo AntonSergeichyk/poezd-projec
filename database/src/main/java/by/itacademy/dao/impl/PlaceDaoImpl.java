@@ -36,7 +36,7 @@ public class PlaceDaoImpl extends BaseDao<Long, Place> implements PlaceDao {
             ListJoin<Wagon, Place> placeJoin = wagonJoin.join(Wagon_.places);
             criteria.select(placeJoin)
                     .where(cb.and(
-                            cb.equal(placeJoin.get(Wagon_.id), wagonId),
+                            cb.equal(wagonJoin.get(Wagon_.id), wagonId),
                             cb.equal(root.get(Train_.id), trainId),
                             cb.equal(placeJoin.get(Place_.reserved), false)))
                     .orderBy(cb.asc(placeJoin.get(Place_.number)));

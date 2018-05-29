@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface WagonDao extends Dao<Long, Wagon> {
 
-    Wagon findByNumber(Integer number);
+    Wagon findByNumber(Integer number, Long trainId);
 
     List<Wagon> findByTrainName(String trainName);
 }

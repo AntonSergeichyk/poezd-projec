@@ -34,6 +34,8 @@ public class TimeTableDaoImpl extends BaseDao<Long, TimeTable> implements TimeTa
                     .setParameter("ssId", startStationId)
                     .setParameter("sfId", finishStationId)
                     .setParameter("ttTimeStart", date)
+                    .setFirstResult(limit)
+                    .setMaxResults(offset)
                     .list();
         }
     }

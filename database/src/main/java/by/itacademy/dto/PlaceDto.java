@@ -9,6 +9,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class PlaceDto {
 
-    Integer countPlace;
-    String typePlace;
+    private Integer countPlace;
+    private String typePlace;
 }

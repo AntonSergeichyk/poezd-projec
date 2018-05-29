@@ -42,6 +42,7 @@ public class BaseDao<PK extends Serializable, T extends BaseEntity<PK>> implemen
             CriteriaBuilder cb = session.getCriteriaBuilder();
             CriteriaQuery<T> criteria = cb.createQuery(clazz);
             Root<T> root = criteria.from(clazz);
+            criteria.select(root);
 
             return session.createQuery(criteria).list();
         }

@@ -1,31 +1,14 @@
 package by.itacademy.dao;
 
-import by.itacademy.entity.BaseEntity;
 import by.itacademy.manager.SessionFactoryManager;
 import by.itacademy.util.ProjectTestDataImporter;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
-
-import java.util.Arrays;
-
-import static org.junit.Assert.assertNotNull;
 
 public class BaseDaoTest {
 
-    public static  SessionFactory FACTORY;
-
-    @BeforeClass
-    public static void before(){
-        FACTORY = SessionFactoryManager.getSessionFactory();
-    }
-
-    @AfterClass
-    public static void after() {
-        FACTORY.close();
-    }
+    public static SessionFactory FACTORY = SessionFactoryManager.getSessionFactory();
 
     @Before
     public void clean() {
@@ -43,37 +26,6 @@ public class BaseDaoTest {
             session.createQuery("delete from Station ").executeUpdate();
             session.getTransaction().commit();
             ProjectTestDataImporter.getInstance().importTestData(FACTORY);
-        }
-    }
-
-    public <T extends BaseEntity<?>> void save(T... object) {
-        try (Session session = FACTORY.openSession()) {
-            session.beginTransaction();
-
-            Arrays.asList(object).forEach(it -> {
-                session.save(it);
-                assertNotNull("Entity is not saved", it.getId());
-            });
-
-            session.getTransaction().commit();
-        }
-    }
-
-    public <T extends BaseEntity<?>> void find(T... objects) {
-        try (Session session = FACTORY.openSession()) {
-            session.beginTransaction();
-
-            Arrays.asList(objects).forEach(it -> {
-                session.save(it);
-                assertNotNull("Entity is not saved", it.getId());
-
-                session.evict(it);
-
-                session.get(it.getClass(), it.getId());
-                assertNotNull("Entity is null", it);
-            });
-
-            session.getTransaction().commit();
         }
     }
 }
