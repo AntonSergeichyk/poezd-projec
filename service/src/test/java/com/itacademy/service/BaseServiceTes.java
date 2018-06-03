@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = ApplicationConfigurationServiceTest.class)
 @Transactional
-public class BaseServiceTest {
+public class BaseServiceTes {
 
     @Autowired
     private TestDataDelete projectTestDataDelete;

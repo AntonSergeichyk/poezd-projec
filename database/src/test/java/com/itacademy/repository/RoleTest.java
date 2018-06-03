@@ -1,41 +1,40 @@
-package com.itacademy.dao;
+package com.itacademy.repository;
 
-import com.itacademy.dao.interfaces.RoleDao;
 import com.itacademy.entity.Role;
+import org.hamcrest.collection.IsCollectionWithSize;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.ArrayList;
 import java.util.List;
 
-import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.hasSize;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertThat;
 
-public class RoleTest extends BaseDaoTest {
+public class RoleTest extends BaseRepositoryTes {
 
     @Autowired
-    private RoleDao roleDao;
+    private RoleRepository roleRepository;
 
     @Test
     public void checkExisting() {
-        assertNotNull("Spring context is not loaded", roleDao);
+        assertNotNull("Spring context is not loaded", roleRepository);
     }
 
     @Test
     public void saveRole() {
         Role role = new Role("user");
-        Integer roleId = roleDao.save(role);
-        Assert.assertNotNull("Id is null", roleId);
+        Role roleId = roleRepository.save(role);
+        Assert.assertNotNull("Id is null", roleId.getId());
     }
 
     @Test
     public void findRole() {
-        List<Role> roles = roleDao.findAll();
-        assertThat(roles, hasSize(2));
-        Role role = roles.get(0);
-        role = roleDao.find(role.getId());
-        assertThat(role.getName(), equalTo("USER"));
+        Iterable<Role> roles = roleRepository.findAll();
+        List<Role> values = new ArrayList<>();
+        roles.forEach(values::add);
+        final int expectedSize = 2;
+        assertThat(values, IsCollectionWithSize.hasSize(expectedSize));
     }
 }

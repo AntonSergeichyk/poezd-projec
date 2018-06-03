@@ -1,56 +1,56 @@
-package com.itacademy.dao;
+package com.itacademy.repository;
 
-import com.itacademy.dao.interfaces.RoleDao;
-import com.itacademy.dao.interfaces.UserDao;
 import com.itacademy.entity.Role;
 import com.itacademy.entity.User;
 import org.hamcrest.Matchers;
+import org.hamcrest.collection.IsCollectionWithSize;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.Matchers.hasSize;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertThat;
+import static org.junit.Assert.*;
 
-public class UserTest extends BaseDaoTest {
+public class UserTest extends BaseRepositoryTes {
 
     @Autowired
-    private UserDao userDao;
+    private UserRepository userRepository;
     @Autowired
-    private RoleDao roleDao;
+    private RoleRepository roleRepository;
 
     @Test
     public void checkExisting() {
-        assertNotNull("Spring context is not loaded", userDao);
+        assertNotNull("Spring context is not loaded", userRepository);
     }
 
     @Test
     public void saveUser() {
         Role role = new Role("use");
         User user = new User(role, "Dima", "11111111", "qwerty@gmail.com");
-        Integer roleId = roleDao.save(role);
-        Assert.assertNotNull("Id is null", roleId);
-        Long userId = userDao.save(user);
-        Assert.assertNotNull("Id is null", userId);
+        Role roleId = roleRepository.save(role);
+        Assert.assertNotNull("Id is null", roleId.getId());
+        User userId = userRepository.save(user);
+        Assert.assertNotNull("Id is null", userId.getId());
     }
 
     @Test
     public void findUser() {
-        List<User> users = userDao.findAll();
-        assertThat(users, hasSize(3));
-        User user = users.get(0);
-        user = userDao.find(user.getId());
-        assertThat(user.getName(), Matchers.equalTo("Anton"));
+        Iterable<User> users = userRepository.findAll();
+        List<User> values = new ArrayList<>();
+        users.forEach(values::add);
+        final int expectedSize = 3;
+        assertThat(values, IsCollectionWithSize.hasSize(expectedSize));
+        assertThat(values.get(0).getName(), Matchers.equalTo("Anton"));
     }
 
     @Test
     public void testFindByNamePassword() {
-        List<User> results = userDao.findByNamePassword("Andrey", "passw");
-        assertThat(results, hasSize(1));
-        assertThat(results.get(0).getMailbox(), equalTo("12qwerty@gmail.com"));
+        Optional<User> user = userRepository.findByNameAndPassword("Andrey", "passw");
+        assertTrue(user.isPresent());
+        assertThat(user.get().getMailbox(), equalTo("12qwerty@gmail.com"));
     }
 }

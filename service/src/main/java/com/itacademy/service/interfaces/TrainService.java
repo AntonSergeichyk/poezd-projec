@@ -1,4 +1,4 @@
-package com.itacademy.serviceNew.interfaces;
+package com.itacademy.service.interfaces;
 
 import com.itacademy.entity.Train;
 

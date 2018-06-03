@@ -26,7 +26,7 @@ public class TimeTableServiceImpl implements TimeTableService {
 
     @Override
     public List<TimeTable> findAllByStationStartIdAndStationFinishIdAndTimeStartOrderByTimeStart(Long stationStartId, Long stationFinishId, LocalDate timeStart, Pageable pageable) {
-        return timeTableRepository.findAllByStationStartIdAndStationFinishIdAndTimeStartOrderByTimeStart(stationStartId, stationFinishId,timeStart,  pageable);
+        return timeTableRepository.findAllByStationStartIdAndStationFinishIdAndTimeStartOrderByTimeStart(stationStartId, stationFinishId, timeStart, pageable);
     }
 
     @Override
@@ -44,7 +44,7 @@ public class TimeTableServiceImpl implements TimeTableService {
 
     @Override
     public TimeTable find(Long id) {
-        Optional<TimeTable> timeTable= timeTableRepository.findById(id);
+        Optional<TimeTable> timeTable = timeTableRepository.findById(id);
         return timeTable.orElse(null);
     }
 

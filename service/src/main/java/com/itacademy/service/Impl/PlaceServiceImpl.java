@@ -35,8 +35,8 @@ public class PlaceServiceImpl implements PlaceService {
     }
 
     @Override
-    public List<PlaceDto> findCountPlaceByTrainIdByWagonType(Serializable trainId) {
-        return placeRepository.findCountPlaceByTrainIdByWagonType(trainId);
+    public List<PlaceDto> findCountPlaceByTrainIdByWagonType(Serializable trainId, Boolean reserwed) {
+        return placeRepository.findCountPlaceByTrainIdByWagonType(trainId, false);
     }
 
     @Override

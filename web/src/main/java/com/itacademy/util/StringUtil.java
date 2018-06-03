@@ -1,4 +1,4 @@
-package com.itacademy.servlet.util;
+package com.itacademy.util;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;

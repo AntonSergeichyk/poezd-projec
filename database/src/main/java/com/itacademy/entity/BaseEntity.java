@@ -1,4 +1,4 @@
-package by.itacademy.entity;
+package com.itacademy.entity;
 
 import lombok.Getter;
 import lombok.Setter;

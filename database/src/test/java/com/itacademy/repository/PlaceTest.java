@@ -1,36 +1,36 @@
-package com.itacademy.dao;
+package com.itacademy.repository;
 
-import com.itacademy.dao.interfaces.*;
 import com.itacademy.dto.PlaceDto;
 import com.itacademy.entity.*;
+import org.hamcrest.collection.IsCollectionWithSize;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
-import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.hasSize;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertThat;
+import static org.junit.Assert.*;
 
-public class PlaceTest extends BaseDaoTest {
+public class PlaceTest extends BaseRepositoryTes {
 
 
     @Autowired
-    private PlaceDao placeDao;
+    private PlaceRepository placeRepository;
     @Autowired
-    private TrainDao trainDao;
+    private TrainRepository trainRepository;
     @Autowired
-    private TypePlaceDao typePlaceDao;
+    private TypePlaceRepository typePlaceRepository;
     @Autowired
-    private TypeWagonDao typeWagonDao;
+    private TypeWagonRepository typeWagonRepository;
     @Autowired
-    private WagonDao wagonDao;
+    private WagonRepository wagonRepository;
 
     @Test
     public void checkExisting() {
-        assertNotNull("Spring context is not loaded", placeDao);
+        assertNotNull("Spring context is not loaded", placeRepository);
     }
 
     @Test
@@ -41,46 +41,58 @@ public class PlaceTest extends BaseDaoTest {
         Wagon wagon = new Wagon(5, train, typeWagon);
         Place place = new Place(wagon, 55, typePlace, true, 12.5);
 
-        Integer typePlaceId = typePlaceDao.save(typePlace);
-        Assert.assertNotNull("Id is null", typePlaceId);
-        Integer typeWagonId = typeWagonDao.save(typeWagon);
-        Assert.assertNotNull("Id is null", typeWagonId);
-        Long trainId = trainDao.save(train);
-        Assert.assertNotNull("Id is null", trainId);
-        Long wagonId = wagonDao.save(wagon);
-        Assert.assertNotNull("Id is null", wagonId);
-        Long placeId = placeDao.save(place);
-        Assert.assertNotNull("Id is null", placeId);
+        TypePlace typePlaceId = typePlaceRepository.save(typePlace);
+        Assert.assertNotNull("Id is null", typePlaceId.getId());
+        TypeWagon typeWagonId = typeWagonRepository.save(typeWagon);
+        Assert.assertNotNull("Id is null", typeWagonId.getId());
+        Train trainId = trainRepository.save(train);
+        Assert.assertNotNull("Id is null", trainId.getId());
+        Wagon wagonId = wagonRepository.save(wagon);
+        Assert.assertNotNull("Id is null", wagonId.getId());
+        Place placeId = placeRepository.save(place);
+        Assert.assertNotNull("Id is null", placeId.getId());
     }
 
     @Test
     public void findPlace() {
-        List<Place> places = placeDao.findAll();
-        assertThat(places, hasSize(48));
-        Place place = places.get(0);
-        place = placeDao.find(place.getId());
-        assertThat(place.getNumber(), equalTo(1));
+        Iterable<Place> places = placeRepository.findAll();
+        List<Place> values = new ArrayList<>();
+        places.forEach(values::add);
+        final int expectedSize = 48;
+        assertThat(values, IsCollectionWithSize.hasSize(expectedSize));
     }
 
     @Test
-    public void findAllFreePlaceByWagonId() {
-        Train train = trainDao.findByName("минск-брест");
+    public void findAllByWagonIdAndReserved() {
+        Optional<Train> train = trainRepository.findByName("минск-брест");
         Assert.assertNotNull("Entity is null", train);
-        Long trainId = train.getId();
-        Wagon wagon = wagonDao.findByNumber(1, trainId);
-        Assert.assertNotNull("Entity is null", wagon);
-        Long wagonId = wagon.getId();
-        List<Place> results = placeDao.findAllFreePlaceByWagonIdAndTrainId(wagonId, trainId);
+        assertTrue(train.isPresent());
+        Long trainId = train.get().getId();
+        Optional<Wagon> wagon = wagonRepository.findByNumberAndTrainId(1, trainId);
+        assertTrue(wagon.isPresent());
+        Long wagonId = wagon.get().getId();
+        List<Place> results = placeRepository.findAllByWagonIdAndReserved(wagonId, false);
         assertThat(results, hasSize(3));
     }
 
     @Test
-    public void findCountPlaceByWagonId() {
-        Train train = trainDao.findByName("минск-брест");
-        Long trainId = train.getId();
-        Wagon wagon = wagonDao.findByNumber(1, trainId);
-        Long wagonId = wagon.getId();
-        List<PlaceDto> places = placeDao.findCountPlaceByWagonId(wagonId);
-        assertThat(places, hasSize(3));
+    public void findCountPlaceByTypeByWagonId() {
+        Optional<Train> train = trainRepository.findByName("минск-брест");
+        assertTrue(train.isPresent());
+        Long trainId = train.get().getId();
+        Optional<Wagon> wagon = wagonRepository.findByNumberAndTrainId(1, trainId);
+        assertTrue(wagon.isPresent());
+        Long wagonId = wagon.get().getId();
+        List<PlaceDto> placesDto = placeRepository.findCountPlaceByTypeByWagonId(wagonId);
+        assertThat(placesDto, hasSize(3));
+    }
+
+    @Test
+    public void findCountPlaceByTrainIdByWagonType() {
+        Optional<Train> train = trainRepository.findByName("минск-брест");
+        assertTrue(train.isPresent());
+        Long trainId = train.get().getId();
+        List<PlaceDto> placeDtos = placeRepository.findCountPlaceByTrainIdByWagonType(trainId, false);
+        assertThat(placeDtos, hasSize(4));
     }
 }

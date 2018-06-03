@@ -30,14 +30,14 @@ public class StationServiceImpl implements StationService {
     @Override
     public List<Station> findAll() {
         Iterable<Station> result = stationRepository.findAll();
-        ArrayList<Station> stations= new ArrayList<>();
+        ArrayList<Station> stations = new ArrayList<>();
         result.forEach(stations::add);
         return stations;
     }
 
     @Override
     public Station find(Long id) {
-        Optional<Station> station= stationRepository.findById(id);
+        Optional<Station> station = stationRepository.findById(id);
         return station.orElse(null);
     }
 

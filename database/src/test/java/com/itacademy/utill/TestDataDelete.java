@@ -7,12 +7,12 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 
 @Component
-public class ProjectTestDataDelete {
+public class TestDataDelete {
 
     private final EntityManagerFactory entityManagerFactory;
 
     @Autowired
-    public ProjectTestDataDelete(EntityManagerFactory entityManagerFactory) {
+    public TestDataDelete(EntityManagerFactory entityManagerFactory) {
         this.entityManagerFactory = entityManagerFactory;
     }
 

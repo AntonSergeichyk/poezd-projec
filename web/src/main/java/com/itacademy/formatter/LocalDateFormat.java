@@ -1,6 +1,6 @@
-package com.itacademy.servlet.formatter;
+package com.itacademy.formatter;
 
-import com.itacademy.servlet.util.StringUtil;
+import com.itacademy.util.StringUtil;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 

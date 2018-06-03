@@ -7,6 +7,5 @@ import org.springframework.context.annotation.Import;
 @Configuration
 @ComponentScan(basePackages = "com.itacademy.utill")
 @Import(ApplicationConfigurationRepository.class)
-public class TestConfiguration {
-
+public class ApplicationConfigurationRepositoryTest {
 }

@@ -1,41 +1,41 @@
-package com.itacademy.dao;
+package com.itacademy.repository;
 
-import com.itacademy.dao.interfaces.*;
 import com.itacademy.entity.*;
+import org.hamcrest.collection.IsCollectionWithSize;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.Matchers.hasSize;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertThat;
+import static org.junit.Assert.*;
 
-public class BookingTest extends BaseDaoTest {
-
+public class BookingTest extends BaseRepositoryTes {
 
     @Autowired
-    private RoleDao roleDao;
+    private RoleRepository roleRepository;
     @Autowired
-    private BookingDao bookingDao;
+    private BookingRepository bookingRepository;
     @Autowired
-    private PlaceDao placeDao;
+    private PlaceRepository placeRepository;
     @Autowired
-    private TrainDao trainDao;
+    private TrainRepository trainRepository;
     @Autowired
-    private TypePlaceDao typePlaceDao;
+    private TypePlaceRepository typePlaceRepository;
     @Autowired
-    private TypeWagonDao typeWagonDao;
+    private TypeWagonRepository typeWagonRepository;
     @Autowired
-    private UserDao userDao;
+    private UserRepository userRepository;
     @Autowired
-    private WagonDao wagonDao;
+    private WagonRepository wagonRepository;
 
     @Test
     public void checkExisting() {
-        assertNotNull("Spring context is not loaded", bookingDao);
+        assertNotNull("Spring context is not loaded", bookingRepository);
     }
 
     @Test
@@ -50,49 +50,49 @@ public class BookingTest extends BaseDaoTest {
         Place place = new Place(wagon, 55, typePlace, true, 12.5);
         Booking booking = new Booking(user, userData, place);
 
-        Integer roleId = roleDao.save(role);
-        Assert.assertNotNull("Id is null", roleId);
-        Long userId = userDao.save(user);
-        Assert.assertNotNull("Id is null", userId);
-        Integer typePlaceId = typePlaceDao.save(typePlace);
-        Assert.assertNotNull("Id is null", typePlaceId);
-        Integer typeWagonId = typeWagonDao.save(typeWagon);
-        Assert.assertNotNull("Id is null", typeWagonId);
-        Long trainId = trainDao.save(train);
-        Assert.assertNotNull("Id is null", trainId);
-        Long wagonId = wagonDao.save(wagon);
-        Assert.assertNotNull("Id is null", wagonId);
-        Long placeId = placeDao.save(place);
-        Assert.assertNotNull("Id is null", placeId);
-        Long bokingId = bookingDao.save(booking);
-        Assert.assertNotNull("Id is null", bokingId);
+        Role role1 = roleRepository.save(role);
+        Assert.assertNotNull("Id is null", role1.getId());
+        User user1 = userRepository.save(user);
+        Assert.assertNotNull("Id is null", user1.getId());
+        TypePlace typePlace1 = typePlaceRepository.save(typePlace);
+        Assert.assertNotNull("Id is null", typePlace1.getId());
+        TypeWagon typeWagon1 = typeWagonRepository.save(typeWagon);
+        Assert.assertNotNull("Id is null", typeWagon1.getId());
+        Train train1 = trainRepository.save(train);
+        Assert.assertNotNull("Id is null", train1.getId());
+        Wagon wagonId = wagonRepository.save(wagon);
+        Assert.assertNotNull("Id is null", wagonId.getId());
+        Place placeId = placeRepository.save(place);
+        Assert.assertNotNull("Id is null", placeId.getId());
+        Booking bokingId = bookingRepository.save(booking);
+        Assert.assertNotNull("Id is null", bokingId.getId());
     }
 
     @Test
     public void findBooking() {
-        List<Booking> bookings = bookingDao.findAll();
-        assertThat(bookings, hasSize(3));
-        Booking booking = bookings.get(0);
-        booking = bookingDao.find(booking.getId());
-        assertThat(booking.getUser().getName(), equalTo("Anton"));
+        Iterable<Booking> bookings = bookingRepository.findAll();
+        List<Booking> values = new ArrayList<>();
+        bookings.forEach(values::add);
+        final int expectedSize = 3;
+        assertThat(values, IsCollectionWithSize.hasSize(expectedSize));
     }
 
     @Test
     public void findByUserId() {
-        List<User> users = userDao.findByNamePassword("Anton", "pass");
-        assertThat(users, hasSize(1));
-        User user = users.get(0);
-        List<Booking> results = bookingDao.findByUserId(user.getId());
+        Optional<User> user = userRepository.findByNameAndPassword("Anton", "pass");
+        assertTrue(user.isPresent());
+        List<Booking> results = bookingRepository.findAllByUserId(user.get().getId());
         assertThat(results, hasSize(1));
         assertThat(results.get(0).getUser().getName(), equalTo("Anton"));
     }
 
     @Test
     public void findByWagonId() {
-        Train train = trainDao.findByName("минск-брест");
-        Assert.assertNotNull("Entity is null", train);
-        Wagon wagon = wagonDao.findByNumber(1, train.getId());
-        List<Booking> results = bookingDao.findByWagonId(wagon.getId());
+        Optional<Train> train = trainRepository.findByName("минск-брест");
+        assertTrue(train.isPresent());
+        Optional<Wagon> wagon = wagonRepository.findByNumberAndTrainId(1, train.get().getId());
+        assertTrue(wagon.isPresent());
+        List<Booking> results = bookingRepository.findAllByPlaceWagonId(wagon.get().getId());
         assertThat(results, hasSize(1));
         assertThat(results.get(0).getUser().getName(), equalTo("Anton"));
     }

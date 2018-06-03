@@ -1,4 +1,9 @@
 package com.itacademy.repository;
 
-public interface RoleRepository {
+import com.itacademy.entity.Role;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface RoleRepository extends CrudRepository<Role, Integer> {
 }

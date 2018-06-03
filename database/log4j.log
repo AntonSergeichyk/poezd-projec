@@ -1,14 +1,10 @@
-2018-05-23 13:21:48,777 INFO  - HHH000412: Hibernate Core {5.2.16.Final}
-2018-05-23 13:21:48,839 INFO  - HHH000206: hibernate.properties not found
-2018-05-23 13:21:52,066 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2018-05-23 13:21:53,028 WARN  - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-2018-05-23 13:21:53,282 INFO  - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:railway_database;INIT=CREATE SCHEMA IF NOT EXISTS
-            railway_storage]
-2018-05-23 13:21:53,282 INFO  - HHH10001001: Connection properties: {user=sa, password=****}
-2018-05-23 13:21:53,282 INFO  - HHH10001003: Autocommit mode: false
-2018-05-23 13:21:53,282 INFO  - HHH000115: Hibernate connection pool size: 20 (min=1)
-2018-05-23 13:21:53,729 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2018-05-23 13:21:55,500 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7f811d00] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-05-23 13:21:55,516 INFO  - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4a067c25] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-05-23 13:21:55,600 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@770d0ea6'
-2018-05-23 13:21:56,391 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-06-03 12:00:11,935 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-03 12:00:12,045 INFO  - HHH000412: Hibernate Core {5.2.16.Final}
+2018-06-03 12:00:12,045 INFO  - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.dialect=org.hibernate.dialect.H2Dialect, hibernate.show_sql=true, hibernate.bytecode.use_reflection_optimizer=false, hibernate.hbm2ddl.auto=create-drop, hibernate.format_sql=true}
+2018-06-03 12:00:12,107 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-03 12:00:12,611 INFO  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-06-03 12:00:13,892 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@4d7aaca2'
+2018-06-03 12:00:14,642 INFO  - HHH000397: Using ASTQueryTranslatorFactory
+2018-06-03 12:00:19,232 INFO  - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'

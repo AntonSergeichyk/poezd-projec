@@ -11,7 +11,7 @@ import java.time.LocalDate;
 import java.time.Month;
 
 @Component
-public class ProjectTestDataImporter {
+public class TestDataImporter {
 
     private final EntityManagerFactory entityManagerFactory;
     private final RoleRepository roleRepository;
@@ -26,12 +26,12 @@ public class ProjectTestDataImporter {
     private final WagonRepository wagonRepository;
 
     @Autowired
-    public ProjectTestDataImporter(EntityManagerFactory entityManagerFactory, RoleRepository roleRepository,
-                                   BookingRepository bookingRepository, PlaceRepository placeRepository,
-                                   StationRepository stationRepository, TimeTableRepository timeTableRepository,
-                                   TrainRepository trainRepository, TypePlaceRepository typePlaceRepository,
-                                   TypeWagonRepository typeWagonRepository, UserRepository userRepository,
-                                   WagonRepository wagonRepository) {
+    public TestDataImporter(EntityManagerFactory entityManagerFactory, RoleRepository roleRepository,
+                            BookingRepository bookingRepository, PlaceRepository placeRepository,
+                            StationRepository stationRepository, TimeTableRepository timeTableRepository,
+                            TrainRepository trainRepository, TypePlaceRepository typePlaceRepository,
+                            TypeWagonRepository typeWagonRepository, UserRepository userRepository,
+                            WagonRepository wagonRepository) {
         this.entityManagerFactory = entityManagerFactory;
         this.roleRepository = roleRepository;
         this.bookingRepository = bookingRepository;

@@ -1,0 +1,11 @@
+2018-06-03 10:46:52,444 INFO  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-03 10:46:52,694 INFO  - HHH000412: Hibernate Core {5.2.16.Final}
+2018-06-03 10:46:52,694 INFO  - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.dialect=org.hibernate.dialect.PostgreSQL95Dialect, hibernate.show_sql=true, hibernate.bytecode.use_reflection_optimizer=false, hibernate.hbm2ddl.auto=create, hibernate.format_sql=true}
+2018-06-03 10:46:52,788 INFO  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-03 10:46:53,335 INFO  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2018-06-03 10:46:53,664 INFO  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-06-03 10:46:53,664 INFO  - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@62fad19
+2018-06-03 10:46:55,727 INFO  - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@1a3e5f23'
+2018-06-03 10:46:56,725 INFO  - HHH000397: Using ASTQueryTranslatorFactory
