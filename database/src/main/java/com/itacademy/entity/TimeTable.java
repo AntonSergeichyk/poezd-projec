@@ -3,7 +3,7 @@ package com.itacademy.entity;
 import lombok.*;
 
 import javax.persistence.*;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Setter
 @Getter
@@ -27,8 +27,8 @@ public class TimeTable extends BaseEntity<Long> {
     private Train train;
 
     @Column(name = "time_start", nullable = false)
-    private LocalDate timeStart;
+    private LocalDateTime timeStart;
 
     @Column(name = "time_finish", nullable = false)
-    private LocalDate timeFinish;
+    private LocalDateTime timeFinish;
 }

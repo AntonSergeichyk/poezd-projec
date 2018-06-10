@@ -1,9 +1,14 @@
 package com.itacademy.service.Impl;
 
+import com.itacademy.service.converter.UserDetailsConverter;
 import com.itacademy.entity.User;
 import com.itacademy.repository.UserRepository;
 import com.itacademy.service.interfaces.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -16,10 +21,12 @@ import java.util.Optional;
 public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
+    private final UserDetailsConverter detailsConverter;
 
     @Autowired
-    public UserServiceImpl(UserRepository userRepository) {
+    public UserServiceImpl(UserRepository userRepository, UserDetailsConverter detailsConverter) {
         this.userRepository = userRepository;
+        this.detailsConverter = detailsConverter;
     }
 
     @Override
@@ -55,5 +62,13 @@ public class UserServiceImpl implements UserService {
     @Override
     public void delete(User object) {
         userRepository.delete(object);
+    }
+
+    @Override
+    public UserDetails loadUserByUsername(String name) throws UsernameNotFoundException {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+           return Optional.of(name)
+                .map(userRepository::findByName)
+                .map(detailsConverter::convert).orElseThrow(()->new UsernameNotFoundException("User does not exist!"));
     }
 }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>TimeTable</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<h2>Расписание поездов</h2>
+
+<div class="container">
+    <p th:text="${timeTable.stationStart.id}"></p>
+    <table border="2">
+        <tr>
+            <td><strong>Поезд</strong></td>
+            <td><strong>Станция отправление</strong></td>
+            <td><strong>Станция прибытие</strong></td>
+            <td><strong>Время отправления</strong></td>
+            <td><strong>Время прибытия</strong></td>
+        </tr>
+        <tr th:each="timeTable1 : ${tableTables}">
+            <td ><a th:href="@{/train}?${timeTable1.train.id}"><span th:text="${timeTable1.train.name}"></span></a></td>
+            <td th:text="${timeTable1.stationStart.name}"></td>
+            <td th:text="${timeTable1.stationFinish.name}"></td>
+            <td th:text="${timeTable1.timeFinish}"></td>
+            <td th:text="${timeTable1.timeStart}"></td>
+        </tr>
+
+    </table>
+</div>
+</body>
+</html>

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.Month;
 
 @Component
@@ -69,15 +69,15 @@ public class TestDataImporter {
         Train trainFifth = saveTrain(entityManager, 5, "минск-дзержинск");
 
         TimeTable timeTableFirst = saveTimeTable(entityManager, minsk, brest, trainFirst,
-                LocalDate.of(2018, Month.MAY, 28), LocalDate.of(2018, Month.MAY, 28));
+                LocalDateTime.of(2018, Month.MAY, 28,0,0), LocalDateTime.of(2018, Month.MAY, 28, 0, 0));
         TimeTable timeTableSecond = saveTimeTable(entityManager, minsk, baranovichy, trainSecond,
-                LocalDate.of(2018, Month.MAY, 28), LocalDate.of(2018, Month.MAY, 28));
+                LocalDateTime.of(2018, Month.MAY, 28,0,0), LocalDateTime.of(2018, Month.MAY, 28, 0, 0));
         TimeTable timeTableThird = saveTimeTable(entityManager, minsk, grodno, trainThird,
-                LocalDate.of(2018, Month.MAY, 28), LocalDate.of(2018, Month.MAY, 28));
+                LocalDateTime.of(2018, Month.MAY, 28,0,0), LocalDateTime.of(2018, Month.MAY, 28, 0, 0));
         TimeTable timeTableFoutth = saveTimeTable(entityManager, minsk, slonim, trainFourth,
-                LocalDate.of(2018, Month.MAY, 28), LocalDate.of(2018, Month.MAY, 28));
+                LocalDateTime.of(2018, Month.MAY, 28,0,0), LocalDateTime.of(2018, Month.MAY, 28, 0, 0));
         TimeTable timeTableFifth = saveTimeTable(entityManager, minsk, dzarjinsk, trainFifth,
-                LocalDate.of(2018, Month.MAY, 28), LocalDate.of(2018, Month.MAY, 28));
+                LocalDateTime.of(2018, Month.MAY, 28,0,0), LocalDateTime.of(2018, Month.MAY, 28, 0, 0));
 
         TypeWagon plackartniy = saveTypeWagon(entityManager, "плацкартный");
         TypeWagon kype = saveTypeWagon(entityManager, "купейный");
@@ -192,7 +192,7 @@ public class TestDataImporter {
         return train;
     }
 
-    private TimeTable saveTimeTable(EntityManager entityManager, Station stationStart, Station stationFinish, Train train, LocalDate timeStart, LocalDate timeFinish) {
+    private TimeTable saveTimeTable(EntityManager entityManager, Station stationStart, Station stationFinish, Train train, LocalDateTime timeStart, LocalDateTime timeFinish) {
         TimeTable timeTable = new TimeTable(stationStart, stationFinish, train, timeStart, timeFinish);
         timeTableRepository.save(timeTable);
 

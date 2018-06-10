@@ -8,7 +8,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -25,8 +25,8 @@ public class TimeTableServiceImpl implements TimeTableService {
     }
 
     @Override
-    public List<TimeTable> findAllByStationStartIdAndStationFinishIdAndTimeStartOrderByTimeStart(Long stationStartId, Long stationFinishId, LocalDate timeStart, Pageable pageable) {
-        return timeTableRepository.findAllByStationStartIdAndStationFinishIdAndTimeStartOrderByTimeStart(stationStartId, stationFinishId, timeStart, pageable);
+    public List<TimeTable> findAllByStationStartIdAndStationFinishIdAndTimeStartOrderByTimeStart(Long stationStartId, Long stationFinishId, LocalDateTime timeStart, Pageable pageable) {
+        return timeTableRepository.findAllByStationStartIdAndStationFinishIdAndTimeStartAfterOrderByTimeStart(stationStartId, stationFinishId, timeStart, pageable);
     }
 
     @Override

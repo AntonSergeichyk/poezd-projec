@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Routing</title>
+</head>
+<body>
+<h2>Заказ билета</h2>
+
+<div class="container">
+    <form th:action="@{/routing}" method="post" th:object="${timeTable}">
+
+        <div class="form-group">
+            <h2>Станция отправления: </h2>
+            <select name="startStation" id="startStation" th:field="*{stationStart.id}">
+                <option th:each="currentStation : ${allStations}"
+                        th:value="${currentStation.id}"
+                        th:text="${currentStation.getName()}">Station
+                </option>
+            </select>
+        </div>
+        <div class="form-group">
+            <h2>Станция прибытия: </h2>
+            <select name="startStation" id="finishStation" th:field="*{stationFinish.id}">
+                <option th:each="currentStation : ${allStations}"
+                        th:value="${currentStation.id}"
+                        th:text="${currentStation.getName()}">Station
+                </option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <p>Выберите дату отправления:
+                <input type="datetime-local" dataformatas="yyyy-MM-dd hh:mm" name="date">
+        </div>
+        <input class="font-menu-button" type="submit" value="найти">
+    </form>
+</div>
+</body>
+</html>
