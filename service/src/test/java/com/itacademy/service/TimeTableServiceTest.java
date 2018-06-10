@@ -9,7 +9,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.Month;
 import java.util.List;
 
@@ -37,7 +37,7 @@ public class TimeTableServiceTest extends BaseServiceTes {
         Station stationStart = stations.get(0);
         Station stationFinish = stations.get(1);
         List<TimeTable> timeTables = timeTableService.findAllByStationStartIdAndStationFinishIdAndTimeStartOrderByTimeStart(stationStart.getId(), stationFinish.getId(),
-                LocalDate.of(2018, Month.MAY, 28), PageRequest.of(0, 2));
+                LocalDateTime.of(2018, Month.MAY, 28, 0, 0), PageRequest.of(0, 2));
         assertThat(timeTables.get(0).getTrain().getName(), equalTo("минск-брест"));
     }
 }

@@ -9,7 +9,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.Month;
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +37,7 @@ public class TimeTableTest extends BaseRepositoryTes {
         Station stationStart = new Station("Минск-Пассажирский");
         Station stationFinish = new Station("Брест-центральный");
         Train train = new Train(701, "Брест-Минск");
-        TimeTable timeTable = new TimeTable(stationStart, stationFinish, train, LocalDate.now(), LocalDate.now());
+        TimeTable timeTable = new TimeTable(stationStart, stationFinish, train, LocalDateTime.now(), LocalDateTime.now());
 
         Station stationStartId = stationRepository.save(stationStart);
         Assert.assertNotNull("Id is Null", stationStartId.getId());
@@ -67,8 +67,8 @@ public class TimeTableTest extends BaseRepositoryTes {
         assertThat(values, IsCollectionWithSize.hasSize(expectedSize));
         Station stationStart = values.get(0);
         Station stationFinish = values.get(1);
-        List<TimeTable> timeTables = timeTableRepository.findAllByStationStartIdAndStationFinishIdAndTimeStartOrderByTimeStart(stationStart.getId(), stationFinish.getId(),
-                LocalDate.of(2018, Month.MAY, 28), PageRequest.of(0, 2));
+        List<TimeTable> timeTables = timeTableRepository.findAllByStationStartIdAndStationFinishIdAndTimeStartAfterOrderByTimeStart(stationStart.getId(), stationFinish.getId(),
+                LocalDateTime.of(2018, Month.MAY, 28,0,0), PageRequest.of(0, 2));
         final int expectedSize2 = 1;
         assertThat(timeTables, IsCollectionWithSize.hasSize(expectedSize2));
         assertThat(timeTables.get(0).getTrain().getName(), equalTo("минск-брест"));
